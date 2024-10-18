@@ -1,0 +1,98 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Altura mínima de toda la app */
+  overflow-y: hidden; /* Evitar scroll global */
+}
+
+.header {
+  background-color: #282c34;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
+  min-height: 0; /* Manejar bien el overflow en pantallas pequeñas */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.leftSidebar {
+  flex: 0 0 200px;
+}
+
+.rightSidebar {
+  flex: 0 0 200px;
+}
+
+.centralContent {
+  flex: 1;
+  padding: 10px; /* Ajuste del padding para más espacio en contenido */
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow-y:scroll; /* Habilitar scroll solo en el contenido central */
+}
+
+.footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px; /* Dar más espacio al footer */
+  font-size: 18px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 800px) {
+  .searchContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Espacio entre el header y el centralContent */
+  }
+
+  .searchBar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .searchBar input {
+    width: 100%;
+  }
+
+  .buttonContainer {
+    margin-left: 10px;
+  }
+}
+
+/* Media queries para pantallas grandes */
+@media (min-width: 801px) {
+  .searchContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0; /* Sin espacio adicional */
+  }
+
+  .searchBar, .buttonContainer {
+    width: auto;
+    margin-bottom: 0; /* Sin espacio adicional */
+    margin-left: 10px; /* Espacio entre los elementos */
+  }
+
+  .searchBar input, .searchBar button {
+    width: auto;
+  }
+}
