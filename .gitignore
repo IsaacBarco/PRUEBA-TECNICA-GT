@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Dist and build directories
+dist/
+build/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# IDE specific files
+.idea
+.vscode
+
+# System files
+.DS_Store
+
+# Local environment variables
+.env
+
+# Specific to your project
+public/
